@@ -1,0 +1,74 @@
+2023-06-09T07:18:59.572-0500 [INFO]  Terraform version: 1.4.5
+2023-06-09T07:18:59.601-0500 [INFO]  Go runtime version: go1.19.6
+2023-06-09T07:18:59.602-0500 [INFO]  CLI args: []string{"C:\\Windows\\system32\\terraform.exe", "plan"}
+2023-06-09T07:18:59.609-0500 [INFO]  CLI command args: []string{"plan"}
+2023-06-09T07:19:00.590-0500 [INFO]  backend/local: starting Plan operation
+2023-06-09T07:19:00.601-0500 [INFO]  provider: configuring client automatic mTLS
+2023-06-09T07:19:00.895-0500 [INFO]  provider.terraform-provider-aws_v4.36.1_x5.exe: configuring server automatic mTLS: timestamp=2023-06-09T07:19:00.859-0500
+2023-06-09T07:19:01.305-0500 [INFO]  provider: configuring client automatic mTLS
+2023-06-09T07:19:01.576-0500 [INFO]  provider.terraform-provider-aws_v4.36.1_x5.exe: configuring server automatic mTLS: timestamp=2023-06-09T07:19:01.545-0500
+2023-06-09T07:19:01.871-0500 [INFO]  backend/local: plan calling Plan
+2023-06-09T07:19:01.877-0500 [INFO]  provider: configuring client automatic mTLS
+2023-06-09T07:19:02.151-0500 [INFO]  provider.terraform-provider-aws_v4.36.1_x5.exe: configuring server automatic mTLS: timestamp=2023-06-09T07:19:02.115-0500
+2023-06-09T07:19:02.423-0500 [INFO]  provider.terraform-provider-aws_v4.36.1_x5.exe: [INFO] Retrieved credentials from "SharedConfigCredentials: C:\\Users\\thejo\\.aws\\credentials"
+2023-06-09T07:19:03.423-0500 [INFO]  ReferenceTransformer: reference not found: "var.virginia_cidr"
+2023-06-09T07:19:04.690-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.vpc_virginia, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .ipv6_netmask_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+      - .ipv6_ipam_pool_id: planned value cty.StringVal("") for a non-computed attribute
+2023-06-09T07:19:04.690-0500 [INFO]  ReferenceTransformer: reference not found: "var.sg_ingress_cidr"
+2023-06-09T07:19:04.691-0500 [INFO]  ReferenceTransformer: reference not found: "var.subnets"
+2023-06-09T07:19:04.840-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.public_subnet, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+2023-06-09T07:19:04.842-0500 [INFO]  ReferenceTransformer: reference not found: "aws_subnet.public_subnet"
+2023-06-09T07:19:04.842-0500 [INFO]  ReferenceTransformer: reference not found: "var.subnets"
+2023-06-09T07:19:04.949-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.sg_public_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2023-06-09T07:19:04.950-0500 [INFO]  ReferenceTransformer: reference not found: "var.ec2_specs"
+2023-06-09T07:19:04.950-0500 [INFO]  ReferenceTransformer: reference not found: "var.ec2_specs"
+2023-06-09T07:19:05.065-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.private_subnet, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .map_public_ip_on_launch: planned value cty.False for a non-computed attribute
+2023-06-09T07:19:05.117-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_route_table_association.crta_public_subnet, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .gateway_id: planned value cty.StringVal("") for a non-computed attribute
+2023-06-09T07:19:06.404-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an unexpected new value for aws_instance.public_instance during refresh.
+      - .tags: was null, but now cty.MapValEmpty(cty.String)
+2023-06-09T07:19:06.414-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.public_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .iam_instance_profile: planned value cty.StringVal("") for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .hibernation: planned value cty.False for a non-computed attribute
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .enclave_options: block count in plan (1) disagrees with count in config (0)
+      - .maintenance_options: block count in plan (1) disagrees with count in config (0)
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+      - .private_dns_name_options: block count in plan (1) disagrees with count in config (0)
+      - .capacity_reservation_specification: block count in plan (1) disagrees with count in config (0)
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+2023-06-09T07:19:06.455-0500 [INFO]  backend/local: plan operation completed
